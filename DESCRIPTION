@@ -16,11 +16,11 @@ RoxygenNote: 7.3.3
 Imports:
     blockr.core,
     random.cdisc.data,
-    shiny
+    shiny,
+    mmrm
 Enhances:
     blockr
 Suggests:
-    mmrm,
     emmeans,
     gt,
     dplyr,
@@ -28,3 +28,7 @@ Suggests:
     tibble,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Remotes:
+    BristolMyersSquibb/blockr,
+    BristolMyersSquibb/blockr.core,
+    BristolMyersSquibb/blockr.ai@d54f582a0f9c3359713708a721bf451a031f66dc
