@@ -6,7 +6,7 @@ Clinical Study Report blocks for blockr. Provides blocks for generating random C
 
 ```r
 # Install from GitHub
-pak::pak("blockr.csr")
+pak::pak("BristolMyersSquibb/blockr.csr")
 ```
 
 ## Getting Started
@@ -14,6 +14,7 @@ pak::pak("blockr.csr")
 Load the package and start an empty workflow:
 
 ```r
+library(blockr)
 library(blockr.csr)
 
 run_app()

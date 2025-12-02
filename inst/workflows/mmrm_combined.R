@@ -1,9 +1,15 @@
 # Combined MMRM Workflow
 # All analyses share the same subject data (ADSL)
 
+# pak::pak("BristolMyersSquibb/blockr.ai@1e6bb5f")
+# pak::pak("BristolMyersSquibb/blockr.core@4d35253")
+#
+#
+options(blockr.eval_parent_env = as.environment("package:stats"))
+
 library(blockr)
 library(blockr.csr)
-pkgload::load_all("../blockr.ai")
+library(blockr.ai)
 
 options(
   blockr.chat_function = list(
