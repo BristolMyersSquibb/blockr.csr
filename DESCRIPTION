@@ -29,6 +29,6 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Remotes:
-    BristolMyersSquibb/blockr
-    BristolMyersSquibb/blockr.core@4d35253
-    BristolMyersSquibb/blockr.ai@1e6bb5f,
+    BristolMyersSquibb/blockr,
+    BristolMyersSquibb/blockr.core@4d35253,
+    BristolMyersSquibb/blockr.ai@1e6bb5f
