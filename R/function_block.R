@@ -158,25 +158,14 @@ blockr.core::new_block(
             shiny::req(current_fn)
             params <- get_param_values()
 
-            # Build the function call
-            fn_text <- r_fn_text()
+            # Build the function call syntactically
+            # Creates: .fn(data, param1 = val1, param2 = val2, ...)
+            fn_call <- as.call(c(list(quote(.fn), quote(data)), params))
 
-            if (length(params) == 0) {
-              bquote(
-                {
-                  .fn <- eval(parse(text = .(fn_text)))
-                  .fn(data)
-                }
-              )
-            } else {
-              param_list <- params
-              bquote(
-                {
-                  .fn <- eval(parse(text = .(fn_text)))
-                  do.call(.fn, c(list(data = data), .(param_list)))
-                }
-              )
-            }
+            bquote({
+              .fn <- .(current_fn)
+              .(fn_call)
+            })
           }),
           state = list(
             fn = shiny::reactive({
