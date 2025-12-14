@@ -19,12 +19,13 @@ Imports:
     shiny,
     shinyAce,
     shinyjs,
+    DT,
+    gt,
     mmrm
 Enhances:
     blockr
 Suggests:
     emmeans,
-    gt,
     dplyr,
     tidyr,
     tibble,

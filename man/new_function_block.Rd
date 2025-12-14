@@ -33,13 +33,26 @@ Additional arguments are introspected and UI is generated based on defaults:
 }
 }
 
+\section{Output Types}{
+
+Output type is auto-detected from the function's return value:
+\itemize{
+\item If the function returns a \code{gt_tbl} object, it renders as a GT table
+\item Otherwise, it renders as an interactive DataTable
+}
+}
+
 \examples{
-# Define a simple filter function
+# Define a simple filter function (renders as DataTable)
 filter_species <- function(data, species = c("setosa", "versicolor", "virginica")) {
   dplyr::filter(data, Species == species)
 }
-
-# Create a block from it
 blk <- new_function_block(fn = filter_species)
+
+# Function returning GT object (auto-detected, renders as GT)
+make_gt <- function(data, title = "My Table") {
+  gt::gt(data) |> gt::tab_header(title = title)
+}
+blk_gt <- new_function_block(fn = make_gt)
 
 }
