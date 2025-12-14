@@ -17,6 +17,8 @@ Imports:
     blockr.core,
     random.cdisc.data,
     shiny,
+    shinyAce,
+    shinyjs,
     mmrm
 Enhances:
     blockr
