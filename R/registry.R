@@ -10,29 +10,34 @@ register_csr_blocks <- function() {
       "new_random_adsl_block",
       "new_random_adam_block",
       "new_function_block",
-      "new_function_xy_block"
+      "new_function_xy_block",
+      "new_function_var_block"
     ),
     name = c(
       "Random ADSL block",
       "Random ADaM block",
       "Function block",
-      "Function XY block"
+      "Function XY block",
+      "Function Var block"
     ),
     description = c(
       "Generate random ADSL dataset using random.cdisc.data",
       "Generate random ADaM dataset (ADQS, ADAE, ADVS, etc.) using random.cdisc.data",
       "Transform data with a custom R function. UI auto-generated from function arguments.",
-      "Transform two data frames (x, y) with a custom R function. UI auto-generated from function arguments."
+      "Transform two data frames (x, y) with a custom R function. UI auto-generated from function arguments.",
+      "Transform multiple data frames (...) with a custom R function. UI auto-generated from function arguments."
     ),
     category = c(
       "input",
       "input",
+      "transform",
       "transform",
       "transform"
     ),
     icon = c(
       "people",
       "clipboard-data",
+      "code-slash",
       "code-slash",
       "code-slash"
     ),
