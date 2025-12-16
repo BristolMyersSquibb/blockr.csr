@@ -69,7 +69,8 @@ block_output.output_switch_block <- function(x, result, session) {
     output_type <- session$input[["expr-output_type"]]
 
     if (is.null(output_type) || output_type == "data.frame") {
-      DT::datatable(result, options = list(pageLength = 10))
+      # DataTable with board options for row limiting
+      dt_datatable(result, x, session)
     } else {
       shiny::HTML(gt::as_raw_html(gt::gt(result)))
     }

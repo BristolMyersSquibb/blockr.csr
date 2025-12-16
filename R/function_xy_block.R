@@ -364,8 +364,8 @@ block_output.function_xy_block <- function(x, result, session) {
       # Result is already a gt object
       shiny::HTML(gt::as_raw_html(result))
     } else {
-      # Default to DataTable for data.frames
-      DT::datatable(result, options = list(pageLength = 10))
+      # Default to DataTable for data.frames with board options
+      dt_datatable(result, x, session)
     }
   })
 }
